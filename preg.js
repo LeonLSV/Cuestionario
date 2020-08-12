@@ -61,23 +61,23 @@ let questions = [
     },{
         question : "Un filtro de 1er orden ¿Cuántos dBs cae?",
         imgSrc : "images/js.png",
-        choiceA : "3dB",
-        choiceB : "6dB",
-        choiceC : "9dB",
+        choiceA : "3 dB",
+        choiceB : "6 dB",
+        choiceC : "9 dB",
         correct : "B"
     },{
         question : "Si hago un arreglo de subs Gradient y los separo 1.43m ¿Qué delay aplicarías? (a 20°)",
         imgSrc : "images/js.png",
-        choiceA : "4.16ms",
-        choiceB : "3.14ms",
-        choiceC : "5.12ms",
+        choiceA : "4.16 ms",
+        choiceB : "3.14 ms",
+        choiceC : "5.12 ms",
         correct : "A"
     },{
         question : "Periodo de 344 Hz",
         imgSrc : "images/js.png",
-        choiceA : "2.1ms",
-        choiceB : "2.9ms",
-        choiceC : "3.4ms",
+        choiceA : "2.1 ms",
+        choiceB : "2.9 ms",
+        choiceC : "3.4 ms",
         correct : "B"
     },{
         question : "Si ecualizo ¿Altero la fase?",
@@ -103,9 +103,9 @@ let questions = [
     },{
         question : "¿Cuánto decae la señal al duplicar la distancia?",
         imgSrc : "images/js.png",
-        choiceA : "3dB",
-        choiceB : "12dB",
-        choiceC : "6dB",
+        choiceA : "3 dB",
+        choiceB : "12 dB",
+        choiceC : "6 dB",
         correct : "C"
     },{
         question : "¿Qué se necesita para hacer un arreglo de sub gradiente?",
@@ -115,47 +115,47 @@ let questions = [
         choiceC : "Separación e inversión",
         correct : "A"
     },{
-        question : "What does JS s?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
+        question : "¿Qué se necesita para hacer un arreglo End Fired de 4 elementos?",
+        imgSrc : "images/js.png",
+        choiceA : "Dly",
+        choiceB : "Dly + separación ¼ long",
+        choiceC : "Separación de ¼ long",
+        correct : "B"
+    },{
+        question : "¿A qué rango de frecuencias afecta la Humedad?",
+        imgSrc : "images/js.png",
+        choiceA : "Altas",
+        choiceB : "Bajas",
+        choiceC : "Medias",
+        correct : "A"
+    },{
+        question : "¿Cuál es el periodo de 1 kHz?",
+        imgSrc : "images/js.png",
+        choiceA : "1 ms",
+        choiceB : "1 seg",
+        choiceC : "100 ms",
+        correct : "A"
+    },{
+        question : "¿Qué información podemos encontrar con el impulso?",
+        imgSrc : "images/js.png",
+        choiceA : "Tiempo de arribos de señales",
+        choiceB : "Reflexiones y Polaridad",
+        choiceC : "Ambos respuestas son correctas",
         correct : "C"
     },{
-        question : "What does JS s?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
+        question : "¿A qué se le llama filtro de peine?",
+        imgSrc : "images/js.png",
+        choiceA : "suma de 2 señales distintas desfasadas entre si",
+        choiceB : "suma de 2 señales iguales desfasadas entre si",
+        choiceC : "suma de 2 señales desfasadas entre si",
+        correct : "B"
     },{
-        question : "What does JS s?",
+        question : "En la configuración del Smaart, debo...",
         imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
-    },{
-        question : "What does JS s?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
-    },{
-        question : "What does JS s?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
-    },{
-        question : "What does JS s?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
+        choiceA : "Configurar los inputs y outputs",
+        choiceB : "Probar el ruido rosa",
+        choiceC : "Llamar al 911-LSV",
+        correct : "A"
     }
 ];
 
