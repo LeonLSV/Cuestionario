@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cuestionario LSV</title>
+</head>
+<body>
+  <section id="container">
+    <img class="logo" id="logo" src="/images/Emoji.png" alt="">
+    <div id="start"><span>Empezar cuestionario</span>Tenes 20 minutos para completarlo</div>
+    <section class="preg" id="quiz" style="display: none">
+        <div id="question"></div>
+        <div id="qImg"></div>
+        <div id="choices">
+            <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+            <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+            <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+        </div>
+        <section class="timerr" id="timer">
+            <div id="counter"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+        </section>
+        <div id="progress"></div>
+    </section>
+    <div id="scoreContainer" style="display: none">
+      <p>Tu resultado es: </p>
+    </div>
+</section>
+  <script src="preg.js"></script>
+</body>
+</html>
