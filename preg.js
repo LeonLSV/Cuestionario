@@ -25,21 +25,21 @@ let questions = [
         correct : "A"
     },{
         question : "Entre estas dos gráficas ¿A cual le aplicarias delay y de cuantos ms?",
-        imgSrc : "images/grafica1.jfif",
+        imgSrc : "images/grafica1.png",
         choiceA : "Azul 0.2 seg",
         choiceB : "Amarilla 0.2 seg",
         choiceC : "Azul 2 ms",
         correct : "C"
     },{
         question : "¿Qué filtro estoy usando? (El corte esta en 500 Hz)",
-        imgSrc : "images/grafica2.jfif",
+        imgSrc : "images/grafica2.png",
         choiceA : "Linkwitz Riler 4to orden",
         choiceB : "Butterworth 2do orden",
         choiceC : "Butterworth 4to orden",
         correct : "C"
     },{
         question : "¿Cuál será la suma resultante en 1KHz de las dos señales que se muestran en la imagen?",
-        imgSrc : "images/grafica3.jfif",
+        imgSrc : "images/grafica3.png",
         choiceA : "+3 dB",
         choiceB : "+0 dB",
         choiceC : "+6 dB",
@@ -60,98 +60,98 @@ let questions = [
         correct : "B"
     },{
         question : "Un filtro de 1er orden ¿Cuántos dBs cae?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica6.png",
         choiceA : "3 dB",
         choiceB : "6 dB",
         choiceC : "9 dB",
         correct : "B"
     },{
-        question : "Si hago un arreglo de subs Gradient y los separo 1.43m ¿Qué delay aplicarías? (a 20°)",
-        imgSrc : "images/js.png",
+        question : "Si hago un arreglo de subs gradiente y los separo 1.43m ¿Qué delay aplicarías? (a 20°)",
+        imgSrc : "images/grafica7.png",
         choiceA : "4.16 ms",
         choiceB : "3.14 ms",
         choiceC : "5.12 ms",
         correct : "A"
     },{
         question : "Periodo de 344 Hz",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica8.png",
         choiceA : "2.1 ms",
         choiceB : "2.9 ms",
         choiceC : "3.4 ms",
         correct : "B"
     },{
         question : "Si ecualizo ¿Altero la fase?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica9.png",
         choiceA : "Verdadero",
         choiceB : "Falso",
         choiceC : "No sé",
         correct : "A"
     },{
         question : "¿Qúe ventana FFT de Smaart es conveniente usar para ajustar un rango de frecuencias amplio?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica10.png",
         choiceA : "32k",
         choiceB : "512",
         choiceC : "MTW",
         correct : "C"
     },{
         question : "¿Para qué sirve el FIND DELAY del Smaart?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica11.png",
         choiceA : "Ajustar el delay",
         choiceB : "Sincronizar las gráficas y saber el delay total",
         choiceC : "Para poner las gráficas más bonitas",
         correct : "B"
     },{
         question : "¿Cuánto decae la señal al duplicar la distancia?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica12.png",
         choiceA : "3 dB",
         choiceB : "12 dB",
         choiceC : "6 dB",
         correct : "C"
     },{
         question : "¿Qué se necesita para hacer un arreglo de sub gradiente?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica13.png",
         choiceA : "Dly, inversión y sep de ¼ de longitud",
         choiceB : "Dly y separación de ¼ de longitud entre subs",
         choiceC : "Separación e inversión",
         correct : "A"
     },{
         question : "¿Qué se necesita para hacer un arreglo End Fired de 4 elementos?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica14.png",
         choiceA : "Dly",
         choiceB : "Dly + separación ¼ long",
         choiceC : "Separación de ¼ long",
         correct : "B"
     },{
         question : "¿A qué rango de frecuencias afecta la Humedad?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica15.png",
         choiceA : "Altas",
         choiceB : "Bajas",
         choiceC : "Medias",
         correct : "A"
     },{
         question : "¿Cuál es el periodo de 1 kHz?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica16.png",
         choiceA : "1 ms",
         choiceB : "1 seg",
         choiceC : "100 ms",
         correct : "A"
     },{
         question : "¿Qué información podemos encontrar con el impulso?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica17.png",
         choiceA : "Tiempo de arribos de señales",
         choiceB : "Reflexiones y Polaridad",
         choiceC : "Ambos respuestas son correctas",
         correct : "C"
     },{
         question : "¿A qué se le llama filtro de peine?",
-        imgSrc : "images/js.png",
+        imgSrc : "images/grafica18.png",
         choiceA : "suma de 2 señales distintas desfasadas entre si",
         choiceB : "suma de 2 señales iguales desfasadas entre si",
         choiceC : "suma de 2 señales desfasadas entre si",
         correct : "B"
     },{
         question : "En la configuración del Smaart, debo...",
-        imgSrc : "img/js.png",
+        imgSrc : "images/grafica19.png",
         choiceA : "Configurar los inputs y outputs",
         choiceB : "Probar el ruido rosa",
         choiceC : "Llamar al 911-LSV",
@@ -164,7 +164,7 @@ let questions = [
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 59; // 10s
+const questionTime = 30; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
