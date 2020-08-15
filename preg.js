@@ -278,20 +278,19 @@ function scoreRender(){
     (scorePerCent >= 91) ? "images/leon5.png" :
     (scorePerCent >= 60) ? "images/leon4.png" :
     // (scorePerCent >= 40) ? "images/leon4.png" :
-    (scorePerCent >= 31) ? "images/leon3.png" :
+    (scorePerCent >= 41) ? "images/leon3.png" :
     (scorePerCent >= 0) ? "images/leon_triste.png" :
     "img/1.png";
 
     let puntaje =
-    (scorePerCent >= 91) ? "Excelente!!!" :
-    (scorePerCent >= 60) ? "¡Buen trabajo!" :
+    (scorePerCent >= 91) ? "¡Excelente!" :
+    (scorePerCent >= 60) ? "¡Buen Trabajo!" :
     // (scorePerCent >= 40) ? "regular" :
     (scorePerCent >= 31) ? "¡Ánimo!" :
-    (scorePerCent >= 0) ? "¡Oh no!" :
+    (scorePerCent >= 0) ? "¡Oh No!" :
     "img/1.png";
 
     scoreDiv.innerHTML = "<img src="+ img +">";
-    // scoreDiv.innerHTML += "<div>"+ puntaje +"</div>";
     scoreDiv.innerHTML += "<p>"+ puntaje +" " + scorePerCent +"%</p>";
 
 }

@@ -88,7 +88,7 @@ body{
 
 #choices{
   display: flex;
-  width : 600px;
+  width : 750px;
   align-items: center;
   justify-content: center;
   padding : 25px 10px
@@ -97,20 +97,21 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  width : 189px;
+  width : 195px;
   height: 44px;
   text-align: center;
   border-radius: 51px;
   cursor: pointer;
-  margin: 5px;
+  margin: 0 15px;
   background-color: #08C08E;
+  border: 3px solid #08C08E;
   color: #FCFCFC;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   padding: 0 10px;
 }
 .choice:hover{
-  color: black;
+  border: 3px solid white;
 }
 .texto{
   width: 364px;
