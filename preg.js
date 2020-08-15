@@ -13,6 +13,7 @@ const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
+const empezar = document.getElementById("empezar");
 
 // create our questions
 let questions = [
@@ -163,8 +164,8 @@ let questions = [
 
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
-let count = 0;
-const questionTime = 30; // 10s
+let count = 30;
+const questionTime = 0; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
@@ -186,6 +187,7 @@ start.addEventListener("click",startQuiz);
 function startQuiz(){
     start.style.display = "none";
     logo.style.display = "none";
+    empezar.style.display = "none";
 
     renderQuestion();
     quiz.style.display = "flex";
@@ -204,12 +206,14 @@ function renderProgress(){
 // counter render
 
 function renderCounter(){
-    if(count <= questionTime){
+    timeGauge.style.display = "none";
+    btimeGauge.style.display = "none";
+    if(count >= questionTime){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
-        count++
+        count--
     }else{
-        count = 0;
+        count = 30;
         // change progress color to red
         answerIsWrong();
         if(runningQuestion < lastQuestion){
@@ -236,7 +240,7 @@ function checkAnswer(answer){
         // change progress color to red
         answerIsWrong();
     }
-    count = 0;
+    count = 30;
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
@@ -249,12 +253,12 @@ function checkAnswer(answer){
 
 // answer is correct
 function answerIsCorrect(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
+    document.getElementById(runningQuestion).style.backgroundColor = "#08C08E";
 }
 
 // answer is Wrong
 function answerIsWrong(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#f00";
+    document.getElementById(runningQuestion).style.backgroundColor = "#0F0F0F";
 }
 
 // score render
@@ -263,16 +267,31 @@ function scoreRender(){
     choices.style.display = "none";
     qImg.style.display = "none";
     question.style.display = "none";
+    counter.style.display = "none";
+    btimeGauge.style.display = "none";
+    progress.setAttribute("id", "fin")
+
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);
     // choose the image based on the scorePerCent
     let img =
-    (scorePerCent >= 80) ? "images/5.png" :
-    (scorePerCent >= 60) ? "images/4.png" :
-    (scorePerCent >= 40) ? "images/3.png" :
-    (scorePerCent >= 20) ? "images/2.png" :
-    (scorePerCent >= 0) ? "images/1.png" :
+    (scorePerCent >= 91) ? "images/leon5.png" :
+    (scorePerCent >= 60) ? "images/leon4.png" :
+    // (scorePerCent >= 40) ? "images/leon4.png" :
+    (scorePerCent >= 31) ? "images/leon3.png" :
+    (scorePerCent >= 0) ? "images/leon_triste.png" :
     "img/1.png";
+
+    let puntaje =
+    (scorePerCent >= 91) ? "Excelente!!!" :
+    (scorePerCent >= 60) ? "¡Buen trabajo!" :
+    // (scorePerCent >= 40) ? "regular" :
+    (scorePerCent >= 31) ? "¡Ánimo!" :
+    (scorePerCent >= 0) ? "¡Oh no!" :
+    "img/1.png";
+
     scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    // scoreDiv.innerHTML += "<div>"+ puntaje +"</div>";
+    scoreDiv.innerHTML += "<p>"+ puntaje +" " + scorePerCent +"%</p>";
+
 }
