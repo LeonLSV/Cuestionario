@@ -64,7 +64,6 @@ body{
 #qImg img{
   width : 674px;
   height : 400px;
-  /* border-top-left-radius: 20px; */
 }
 
 #question{
@@ -201,4 +200,71 @@ body{
   font-weight: bold;
   text-align: center;
   color: #2B2B2B;
+}
+@media (max-width: 425px) {
+  #container{
+    width : 360px;
+    margin: 0;
+    top: 0;
+  }
+  .preg{
+    margin-top: -30px;
+  }
+  .texto{
+    width: 320px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B2B2B;
+    line-height: 33px;
+    padding: 0 5px 20px 5px;
+  }
+  #question{
+    width: 364px;
+    height : 62px;
+    padding: 10px;
+  }
+  #question p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  #qImg{
+    width : 360px;
+    height : 230px;
+  }
+  #qImg img{
+    width : 360px;
+    height : 230px;
+  }
+  #choices{
+    flex-direction: column;
+    width : 360px;
+    padding : 15px 0
+  }
+  .choice{
+    margin: 5px 0;
+    font-size: 13px;
+    padding: 10 10px;
+  }
+  #timer{
+    position: relative;
+    left: 0;
+    right: 0;
+    height : 50px;
+    bottom : -20px;
+    text-align: center;
+  }
+  #scoreContainer{
+    margin: 50px 0 130px 0;
+    width : 360px;
+  }
+  #progress{
+    width : 340px;
+    position: relative;
+    bottom : -20px;
+    left: 0;
+    right : 0;
+    text-align: center;
+  }
 }
