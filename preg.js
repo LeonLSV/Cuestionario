@@ -302,7 +302,7 @@ function answerIsCorrect(){
 
 // answer is Wrong
 function answerIsWrong(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#0F0F0F";
+    document.getElementById(runningQuestion).style.backgroundColor = "#292929";
 }
 
 // score render
@@ -346,7 +346,6 @@ function scoreRender(){
 const btn = document.getElementById('switch');
 const sun = document.getElementById('sun');
 const moon = document.getElementById('moon');
-const textoFinal = document.getElementById('textoFinal');
 
 btn.addEventListener('click', () => {
     container.classList.toggle('dark');
@@ -357,7 +356,7 @@ btn.addEventListener('click', () => {
     question.classList.toggle('active')
     counter.classList.toggle('active')
     scoreDiv.classList.toggle('active')
-    textoFinal.classList.toggle('active')
+
 
 
     if(container.classList.contains('dark')){
@@ -376,7 +375,7 @@ if(localStorage.getItem('dark-mode')==='true'){
     question.classList.add('active')
     counter.classList.add('active')
     scoreDiv.classList.add('active')
-    textoFinal.classList.add('active')
+
 }else{
     container.classList.remove('dark');
     btn.classList.remove('active')
@@ -386,5 +385,5 @@ if(localStorage.getItem('dark-mode')==='true'){
     question.classList.remove('active')
     counter.classList.remove('active')
     scoreDiv.classList.remove('active')
-    textoFinal.classList.remove('active')
+
 }
