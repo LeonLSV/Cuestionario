@@ -14,6 +14,7 @@ const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 const empezar = document.getElementById("empezar");
+const switch1 = document.getElementById("switch");
 
 // create our questions
 let questions = [
@@ -230,6 +231,7 @@ function startQuiz(){
     start.style.display = "none";
     logo.style.display = "none";
     empezar.style.display = "none";
+    switch1.style.display = "none";
 
     renderQuestion();
     quiz.style.display = "flex";
@@ -335,4 +337,47 @@ function scoreRender(){
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ puntaje +" " + scorePerCent +"%</p>";
 
+}
+
+
+
+
+
+const btn = document.getElementById('switch');
+const sun = document.getElementById('sun');
+const moon = document.getElementById('moon');
+
+btn.addEventListener('click', () => {
+    container.classList.toggle('dark');
+    btn.classList.toggle('active')
+    sun.classList.toggle('no')
+    moon.classList.toggle('no')
+    empezar.classList.toggle('active')
+    question.classList.toggle('active')
+    counter.classList.toggle('active')
+
+
+    if(container.classList.contains('dark')){
+    localStorage.setItem('dark-mode', 'true')
+    } else {
+    localStorage.setItem('dark-mode', 'false')
+    }
+});
+
+if(localStorage.getItem('dark-mode')==='true'){
+    container.classList.add('dark');
+    btn.classList.add('active')
+    sun.classList.add('no')
+    moon.classList.add('no')
+    empezar.classList.add('active')
+    question.classList.add('active')
+    counter.classList.add('active')
+}else{
+    container.classList.remove('dark');
+    btn.classList.remove('active')
+    sun.classList.remove('no')
+    moon.classList.remove('no')
+    empezar.classList.remove('active')
+    question.classList.remove('active')
+    counter.classList.remove('active')
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modo nocturno</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+  <style>
+    body{
+      background: white;
+      transition: 1s ease all;
+    }
+    body.dark{
+      background: black;
+    }
+    .switch{
+      background: #2f4486;
+      border-radius: 1000px;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      outline: none;
+    }
+
+    .switch.active{
+      background: #b9512a;
+      color: black;
+      left: unset;
+      right: 0;
+    }
+    .switch span {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      display: block;
+      background: none;
+      color: #fff;
+    }
+    #sun{
+      color: white;
+      transition: 1s ease all;
+    }
+    #sun.no{
+      color: black;
+    }
+    #moon{
+      color: black;
+      transition: 1s ease all;
+    }
+    #moon.no{
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button class="switch" id="switch">
+    <span><i class="fas fa-sun" id="sun"></i></span>
+    <span><i class="fas fa-moon" id="moon"></i></span>
+  </button>
+
+  <script>
+    const btn = document.getElementById('switch');
+    const sun = document.getElementById('sun');
+    const moon = document.getElementById('moon');
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      btn.classList.toggle('active')
+      sun.classList.toggle('no')
+      moon.classList.toggle('no')
+
+      if(document.body.classList.contains('dark')){
+        localStorage.setItem('dark-mode', 'true')
+      } else {
+        localStorage.setItem('dark-mode', 'false')
+      }
+    });
+
+    if(localStorage.getItem('dark-mode')==='true'){
+      document.body.classList.add('dark');
+      btn.classList.add('active')
+      sun.classList.add('no')
+      moon.classList.add('no')
+    }else{
+      document.body.classList.remove('dark');
+      btn.classList.remove('active')
+      sun.classList.remove('no')
+      moon.classList.remove('no')
+    }
+  </script>
+</body>
+
+</html>

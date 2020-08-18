@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Cuestionario LSV</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section id="container">
     <img class="logo" id="logo" src="./images/leon4.png" alt="">
     <div class="texto" id="empezar">Tenes 13 minutos para completar el cuestionario</div>
     <button class="boton" id="start">Empezar</button>
+    <button class="switch" id="switch">
+      <span><i class="fas fa-sun" id="sun"></i></span>
+      <span><i class="fas fa-moon" id="moon"></i></span>
+    </button>
     <section class="preg" id="quiz" style="display: none">
-        <div id="question"></div>
+        <div class="question" id="question"></div>
         <div id="qImg"></div>
         <div id="choices">
             <div class="choice" id="A" onclick="checkAnswer('A')"></div>
@@ -20,14 +26,14 @@
             <div class="choice" id="C" onclick="checkAnswer('C')"></div>
         </div>
         <section class="timerr" id="timer">
-            <div id="counter"></div>
+            <div class="counter" id="counter"></div>
             <div id="btimeGauge"></div>
             <div id="timeGauge"></div>
         </section>
         <div id="progress"></div>
     </section>
     <div id="scoreContainer" style="display: none">
-      <p>Tu resultado es: </p>
+      <!-- <p>Tu resultado es: </p> -->
     </div>
 </section>
   <script src="preg.js"></script>
