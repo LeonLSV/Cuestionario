@@ -77,7 +77,6 @@ body{
   vertical-align: center;
   margin-top: 0px;
   padding: 10px;
-  /* color: #2B2B2B; */
 }
 .question.active{
   color: #FCFCFC;
@@ -196,7 +195,7 @@ body{
   margin-right : 5px;
 }
 
-#scoreContainer{
+.scoreContainer{
   margin: 50px 0 130px 0;
   background-color: #FCFCFC;
   /* opacity: 0.8; */
@@ -209,20 +208,28 @@ body{
   align-items: center;
   justify-content: center;
   display: none;
+
+}
+.scoreContainer.active{
+  background-color: #0f121b;
 }
 #scoreContainer img{
   height: 180px;
   margin-top: 20px;
 }
-#scoreContainer p{
+.textoFinal{
   display: flex;
   padding: 10px;
   margin: 0;
   font-size: 37px;
   font-weight: bold;
   text-align: center;
-  color: #2B2B2B;
+  color: #08C08E;
 }
+.textoFinal.active{
+  color: #FCFCFC;
+}
+
 @media (max-width: 425px) {
   #container{
     width : 360px;
