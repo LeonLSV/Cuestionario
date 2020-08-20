@@ -154,16 +154,16 @@ let questions = [
     },{
         question : "En la configuración del Smaart, debo...",
         imgSrc : "images/imagen19.png",
-        choiceA : "Configurar los inputs y outputs",
+        choiceA : "Configurar la interface, inputs y outputs",
         choiceB : "Probar el ruido rosa",
         choiceC : "Llamar al 911-LSV",
         correct : "A"
     },{
         question : "¿Se puede ajustar un sistema de sonido solo con el OIDO?",
         imgSrc : "images/imagen20.png",
-        choiceA : "Por supuesto",
-        choiceB : "Siendo un Alienígena, SI",
-        choiceC : "Si, claro",
+        choiceA : "Ni idea",
+        choiceB : "Siendo un Alienígena... SI",
+        choiceC : "Si, obvio",
         correct : "B"
     },{
         question : "¿Qué filtro estoy usando? (El corte esta en 1000 Hz)",
@@ -302,7 +302,7 @@ function answerIsCorrect(){
 
 // answer is Wrong
 function answerIsWrong(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#292929";
+    document.getElementById(runningQuestion).style.backgroundColor = "#e62222";
 }
 
 // score render
